@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="card-header fs-3 fw-bold text-center">Search Books</div>
+    <div class="card-body">
+            <div class="row g-3 d-flex justify-content-center">
+                <div class="col-10">
+                  <input [(ngModel)]="bookData" type="text" class="form-control" placeholder="Search books by name, author or publisher" aria-label="Book Info">                  
+                </div>
+                <div class="col-2">
+                    <button class="btn btn-primary w100" (click)="getBookByFiter()"><span class="bi-search"></span></button>
+                </div>
+              </div>
+        <br>
+        <div class="d-flex justify-content-center" *ngFor="let book of bookList">
+            <app-book-item [item]="book"></app-book-item>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="card">
+    <div class="card-header fs-3 fw-bold text-center">Stock Management</div>
+    <div class="card-body">
+        <div class="row g-3 d-flex justify-content-center">
+            <div class="col-8">
+                <input [(ngModel)]="bookData" type="text" class="form-control"
+                    placeholder="Search books by name, author or publisher" aria-label="Book Info">
+            </div>
+            <div class="col-2  d-grid gap-1 d-md-flex justify-content-md-end">
+                <button class="btn btn-primary w100" (click)="getBookByFiter()" title="Search"><span
+                        class="bi-search"></span></button>
+            </div>
+            <div class="col-2  d-grid gap-1 d-md-flex justify-content-md-end">
+                <button class="btn btn-success w100" title="New Book" routerLink="/add" routerLinkActive="activebutton"><span class="bi bi-journal-plus"></span></button>
+            </div>
+        </div>
+        <br>
+        <div class="d-flex justify-content-center" *ngFor="let book of bookList">
+            <app-book-item [item]="book" [type]='"stock"'></app-book-item>
+        </div>
+    </div>
+</div>
+

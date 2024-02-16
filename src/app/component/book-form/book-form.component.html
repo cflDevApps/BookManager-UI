@@ -1,0 +1,42 @@
+<form>
+    <div class="mb-3">
+        <label for="inputName" class="form-label">Name</label>
+        <input type="text" [(ngModel)]="formItem.name" name="inputName" id="inputName" class="form-control"  placeholder="Book's Name"/>
+    </div>
+
+    <div class="mb-3">
+        <label for="inputAuthor" class="form-label">Author</label>
+        <input type="text" [(ngModel)]="formItem.author" name="inputAuthor" id="inputAuthor" class="form-control"  placeholder="Book's author name"/>
+    </div>
+
+    <div class="mb-3">
+        <label for="inputPublisher" class="form-label">Publisher</label>
+        <input type="text" [(ngModel)]="formItem.publisher" name="inputPublisher" id="inputPublisher" class="form-control"  placeholder="Book's Publisher"/>
+    </div>
+
+
+    <div class="mb-3">
+        <label for="inputYear" class="form-label">Year</label>
+        <input type="text" [(ngModel)]="formItem.year" name="inputYear" id="inputYear" class="form-control"  placeholder="Book's year release"/>
+    </div>
+
+    <div class="mb-3">
+        <label for="inputPrice" class="form-label">Price</label>
+        <input type="text" [(ngModel)]="formItem.price" name="inputPrice" id="inputPrice" class="form-control"  placeholder="Book's price"/>
+    </div>
+
+    <div class="mb-3">
+        <label for="inputUnits" class="form-label">Units</label>
+        <input type="text" [(ngModel)]="formItem.units" name="inputUnits" id="inputUnits" class="form-control"  placeholder="How many units available"/>
+    </div>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button  class="btn btn-secondary" routerLink="/stock" routerLinkActive="activebutton" title="Cancel" data-bs-dismiss="modal"><span class="bi bi-arrow-return-left"></span></button>
+        <button (click)="saveBook()" class="btn btn-primary" title="Save"><span class="bi bi-save"></span></button>
+    </div>            
+</form>
+
+
+
+
+

@@ -1,0 +1,23 @@
+<div class="card mb-3" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="assets/img/generic-cover.jpg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h3 class="card-title">{{item.name}}</h3> 
+          <h5>{{item.units}} available</h5>
+          <p class="card-text">Author <b>{{item.author}}</b></p>
+          <p class="card-text"><small class="text-muted">Publisher <b>{{item.publisher}}</b></small></p>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end" *ngIf="type == 'search'">
+            <button class="btn btn-primary" title="Add"><span class="bi bi-plus-lg"></span></button>
+          </div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end" *ngIf="type == 'stock'">
+            <button class="btn btn-danger"  routerLink="/delete/{{item.id}}" routerLinkActive="activebutton" title="Delete"><span class="bi bi-trash"></span></button>
+            <button class="btn btn-info" routerLink="/edit/{{item.id}}" routerLinkActive="activebutton" title="Edit"><span class="bi bi-pencil-square"></span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
